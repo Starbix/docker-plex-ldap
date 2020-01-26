@@ -30,6 +30,6 @@ jobs:
         run: |
           docker buildx build \
             --platform linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 \
-            --tag starbix/plex-ldap:${{ github.ref }} \
+            --tag starbix/plex-ldap:${GITHUB_REF##*/} \
             --push \
             --file ./Dockerfile .
