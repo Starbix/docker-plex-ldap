@@ -20,7 +20,7 @@ jobs:
         run: echo ${{ steps.buildx.outputs.platforms }}
       -
         name: Login to Docker Hub
-        run: docker login -u ${{ secrets.REGISTRY_USERNAME }} -p ${{ secrets.REGISTRY_TOKEN }}
+        run: echo ${{ secrets.REGISTRY_TOKEN }} | docker login -u ${{ secrets.REGISTRY_USERNAME }} -p --password-stdin
       -
         name: Run Buildx
         run: |

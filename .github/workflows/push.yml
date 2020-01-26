@@ -28,11 +28,7 @@ jobs:
         run: echo ${{ steps.buildx.outputs.platforms }}
       -
         name: Login to Docker Hub
-        uses: azure/docker-login@v1
-        with:
-          login-server: index.docker.io
-          username: ${{ secrets.REGISTRY_USERNAME }}
-          password: ${{ secrets.REGISTRY_TOKEN }}
+        run: echo ${{ secrets.REGISTRY_TOKEN }} | docker login -u ${{ secrets.REGISTRY_USERNAME }} -p --password-stdin
       -
         name: Run Buildx
         run: |
