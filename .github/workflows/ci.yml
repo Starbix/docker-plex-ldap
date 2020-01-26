@@ -1,14 +1,6 @@
 name: ci
 
-on:
-  pull_request:
-    branches:
-      - master
-      - releases/*
-  push:
-    branches:
-      - master
-      - releases/*
+on: [push, pull_request]
 
 jobs:
   ci:
