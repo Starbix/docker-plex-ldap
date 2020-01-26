@@ -1,6 +1,14 @@
-name: ci
+name: push
 
-on: [push, pull_request]
+on:
+  pull_request:
+    branches:
+      - master
+      - releases/*
+  push:
+    branches:
+      - master
+      - releases/*
 
 jobs:
   ci:
@@ -26,5 +34,6 @@ jobs:
         run: |
           docker buildx build \
             --platform linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 \
-            --output "type=image,push=false" \
+            --tag starbix/plex-ldap:${{ github.sha }} \
+            --push \
             --file ./Dockerfile .
