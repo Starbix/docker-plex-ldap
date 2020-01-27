@@ -1,17 +1,13 @@
 name: push
 
 on:
-  pull_request:
-    branches:
-      - master
-      - releases/*
   push:
     branches:
       - master
-      - releases/*
+      - dev
 
 jobs:
-  ci:
+  push:
     runs-on: ubuntu-latest
     steps:
       -
@@ -34,6 +30,6 @@ jobs:
         run: |
           docker buildx build \
             --platform linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 \
-            --tag starbix/plex-ldap:${{ github.sha }} \
+            --tag starbix/plex-ldap:${GITHUB_REF##*/} \
             --push \
             --file ./Dockerfile .
