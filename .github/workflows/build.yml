@@ -9,7 +9,7 @@ on:
     paths:
       - 'Dockerfile'
       - 'rootfs/**'
-      - '.github/workflows/push.yml'
+      - '.github/workflows/build.yml'
 
 jobs:
   build:
