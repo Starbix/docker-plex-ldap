@@ -62,7 +62,7 @@ jobs:
             --file ./Dockerfile .
       -
         name: Docker Buildx (latest)
-        if: success() && contains(steps.prepare.outputs.version, 'dev')
+        if: success() && !contains(steps.prepare.outputs.version, 'dev')
         run: |
           docker buildx build \
             --platform linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 \
