@@ -1,7 +1,11 @@
 # LDAP for Plex
 [![Docker Pulls](https://img.shields.io/docker/pulls/starbix/plex-ldap.svg)](https://hub.docker.com/r/starbix/plex-ldap)
 
+<<<<<<< HEAD
 [![](https://github.com/starbix/docker-plex-ldap/workflows/build/badge.svg)](https://github.com/starbix/docker-plex-ldap)
+=======
+[![](https://github.com/starbix/docker-plex-ldap/workflows/CI/badge.svg)](https://github.com/starbix/docker-plex-ldap)
+>>>>>>> 58a05dc5c39d7a504f361151276f42168dcebba3
 [![](https://images.microbadger.com/badges/version/starbix/plex-ldap.svg)](https://microbadger.com/images/starbix/plex-ldap) [![](https://images.microbadger.com/badges/image/starbix/plex-ldap.svg)](https://microbadger.com/images/starbix/plex-ldap)
 
 ## Description
