@@ -1,7 +1,8 @@
 # LDAP for Plex
 [![Docker Pulls](https://img.shields.io/docker/pulls/starbix/plex-ldap.svg)](https://hub.docker.com/r/starbix/plex-ldap)
 
-[![](https://images.microbadger.com/badges/version/starbix/plex-ldap.svg)](http://microbadger.com/images/starbix/plex-ldap) [![](https://images.microbadger.com/badges/image/starbix/plex-ldap.svg)](http://microbadger.com/images/starbix/plex-ldap)
+[![](https://github.com/starbix/docker-plex-ldap/workflows/build/badge.svg)](https://github.com/starbix/docker-plex-ldap)
+[![](https://images.microbadger.com/badges/version/starbix/plex-ldap.svg)](https://microbadger.com/images/starbix/plex-ldap) [![](https://images.microbadger.com/badges/image/starbix/plex-ldap.svg)](https://microbadger.com/images/starbix/plex-ldap)
 
 ## Description
 What is **[LDAP for Plex](https://github.com/hjone72/LDAP-for-Plex)**?

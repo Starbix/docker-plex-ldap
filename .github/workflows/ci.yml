@@ -1,22 +1,10 @@
-name: ci
+name: CI
 
-on:
-  pull_request:
-    branches:
-      - master
-      - releases/*
-  push:
-    branches:
-      - master
-      - releases/*
+on: [pull_request]
 
 jobs:
-  ci:
+  CI:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        version:
-          - latest
     steps:
       -
         name: Checkout
@@ -26,10 +14,7 @@ jobs:
         id: buildx
         uses: crazy-max/ghaction-docker-buildx@v1
         with:
-          version: ${{ matrix.version }}
-      -
-        name: Available platforms
-        run: echo ${{ steps.buildx.outputs.platforms }}
+          version: latest
       -
         name: Run Buildx
         run: |
