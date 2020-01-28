@@ -70,3 +70,8 @@ jobs:
             --tag "${{ steps.prepare.outputs.docker_image }}:latest" \
             --push \
             --file ./Dockerfile .
+      -
+        name: Docker Check Manifest
+        if: success()
+        run: |
+          docker run --rm mplatform/mquery ${{ steps.prepare.outputs.docker_image }}:${{ steps.prepare.outputs.version }}
